@@ -1,0 +1,13 @@
+{
+  "username": "User",
+  "role": "Author",
+  "preferences": {
+    "theme": "dark",
+    "tone": "professional"
+  },
+  "writing_style": {
+    "perspective": "Unknown",
+    "tense": "Unknown"
+  },
+  "last_active": "{{DATE}}"
+}

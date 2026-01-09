@@ -1,0 +1,19 @@
+{
+  "title": "Wheels of Amara",
+  "author": "CNTRL User",
+  "series": "Standalone",
+  "version": "1.0.0",
+  "created_at": "2026-01-09T00:10:07.143Z",
+  "status": "Planning",
+  "production_data": {
+    "word_count": 0,
+    "deadline": null,
+    "isbn": null
+  },
+  "context": {
+    "genre": "Fiction",
+    "theme": "Unknown",
+    "tone": "Epic",
+    "summary": "A CNA that is gifted a flash drive that provides the user an answer to any problem by a patient that mysteriously dies"
+  }
+}

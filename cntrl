@@ -1,0 +1,49 @@
+#!/bin/bash
+# CNTRL BOOTLOADER v2.1
+clear
+# Colors
+GOLD='\033[0;33m'
+GREY='\033[0;90m'
+WHITE='\033[1;37m'
+NC='\033[0m' # No Color
+
+echo -e "${GOLD}"
+echo "   ______      __  __ "
+echo "  / ____/___  / /_/ / "
+echo " / /   / __ \/ __/ /  "
+echo "/ /___/ / / / /_/ /___"
+echo "\____/_/ /_/\__/_____/"
+echo -e "${NC}"
+echo -e "${GREY}>> SYSTEM INTIALIZATION SEQUENCE...${NC}"
+echo -e "${GREY}>> MOUNTING KERNEL...${NC}"
+
+# 1. Kill any existing instance on Port 3001 (Hostile Takeover)
+PORT=3001
+if lsof -i :$PORT >/dev/null 2>&1; then
+    echo -e "${GOLD}>> TERMINATING GHOST PROCESSES :$PORT...${NC}"
+    lsof -ti :$PORT | xargs kill -9
+    sleep 1
+fi
+
+# 2. Navigate to Core and Start
+DIR="$(dirname "$0")/_cntrl"
+cd "$DIR"
+
+# 3. Start Core Kernel (Background)
+# Pulse Animation: Single line update using \r
+echo -ne "${GREY}   ~ Unfolding the threads of imagination...${NC}\r"
+node server.js > /dev/null 2>&1 &
+SERVER_PID=$!
+sleep 1.5
+
+echo -ne "${GREY}   ~ Attuning to the Narrative...           ${NC}\r"
+sleep 1.5
+
+echo -ne "${GREY}   ~ Casting light into the void...         ${NC}\r"
+sleep 1
+
+# 5. Launch Agentic Interface (Foreground)
+echo -e "${GOLD}   ✦ THE TAPESTRY IS OPEN.                  ${NC}"
+# Use a trap to kill the server when the UI exits
+trap "kill -9 $SERVER_PID" EXIT
+npx tsx cli/index.jsx

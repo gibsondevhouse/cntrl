@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-surface: #121212;
+  --color-primary: #EAEAEA;
+  --color-secondary: #888888;
+  --color-glass: rgba(255, 255, 255, 0.05);
+
+  --font-sans: Inter, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary font-sans antialiased overflow-hidden selection:bg-accent-dim selection:text-primary;
+  }
+  
+  /* Delicate Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface-glass backdrop-blur-xl border border-glass-border shadow-2xl;
+  }
+  
+  .glass-button {
+    @apply px-3 py-1.5 rounded-md text-xs font-medium tracking-wide transition-all duration-300
+           hover:bg-white/5 active:scale-95 border border-transparent hover:border-white/5;
+  }
+
+  .cntrl-input {
+      @apply bg-black/20 border border-white/5 rounded px-3 py-2 text-sm text-secondary 
+             focus:outline-none focus:border-white/20 focus:text-primary transition-colors;
+  }
+}

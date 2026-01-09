@@ -1,0 +1,18 @@
+{
+  "title": "{{TITLE}}",
+  "author": "CNTRL User",
+  "series": "Standalone",
+  "version": "1.0.0",
+  "created_at": "{{DATE}}",
+  "status": "Planning",
+  "production_data": {
+     "word_count": 0,
+     "deadline": null,
+     "isbn": null
+  },
+  "context": {
+    "genre": "Fiction",
+    "theme": "Unknown",
+    "tone": "Epic"
+  }
+}
