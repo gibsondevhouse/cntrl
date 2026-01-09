@@ -8,7 +8,7 @@ To provide a distraction-free, intelligent, and immersive "Author's Workbench" t
 ## The Storyteller System
 
 - **The Mind (Server)**: A background Node.js process acting as the "Muse," simulating NLU and context retention.
-- **The Face (TUI)**: A React-based Terminal Interface tailored for focus, featuring a "Fantastical" aesthetic.
+- **The Face (Frontend)**: A React-based interface tailored for focus, featuring a "Fantastical" aesthetic and specialized dashboards for Novels vs Articles.
 - **The Hand (Agent)**: An intelligent partner that writes *with* you, offering prompts and structural guidance.
 
 ## Directives

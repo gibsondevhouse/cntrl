@@ -1,5 +1,5 @@
 import React from 'react';
 import { render } from 'ink';
-import UI from './ui.jsx';
+import UI from './ui.js';
 
 render(<UI />);

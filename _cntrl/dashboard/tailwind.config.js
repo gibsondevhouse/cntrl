@@ -7,23 +7,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#050505", // Deepest black/charcoal
+        background: "#202023", // Soft Charcoal (Lighter than #141416)
         surface: {
-            DEFAULT: "#121212",
-            glass: "rgba(20, 20, 20, 0.7)",
-            hover: "rgba(255, 255, 255, 0.03)"
+            DEFAULT: "#2a2a2e", // Lighter Surface
+            glass: "rgba(42, 42, 46, 0.7)",
+            hover: "rgba(191, 166, 247, 0.08)"
         },
-        primary: "#EAEAEA", // Softened white
-        secondary: "#888888",
+        primary: "#edecec", // Soft Grey-White
+        secondary: "#a1a1aa", // Lighter Cool Grey
         accent: {
-            DEFAULT: "#D4AF37", // Muted Gold
-            dim: "rgba(212, 175, 55, 0.1)"
+            DEFAULT: "#BFA6F7", // Editorial Lavender
+            dim: "rgba(191, 166, 247, 0.15)"
         },
-        paper: "#e8e6e3", // Warm off-white for reading
-        ink: "#1a1a1a",   // Soft black for text on paper
+        paper: "#e8e6e3", 
+        ink: "#1a1a1a",   
         glass: {
-            light: "rgba(255, 255, 255, 0.05)",
-            border: "rgba(255, 255, 255, 0.08)"
+            light: "rgba(255, 255, 255, 0.03)",
+            border: "rgba(255, 255, 255, 0.05)"
         }
       },
       fontFamily: {

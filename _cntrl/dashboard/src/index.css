@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #050505;
-  --color-surface: #121212;
-  --color-primary: #EAEAEA;
-  --color-secondary: #888888;
-  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-background: #202023; /* Soft Charcoal */
+  --color-surface: #2a2a2e;
+  --color-surface-hover: rgba(191, 166, 247, 0.05);
+  --color-primary: #edecec;
+  --color-secondary: #8f8f99;
+  --color-accent: #BFA6F7;     /* Lavender Accent */
+  --color-accent-dim: rgba(191, 166, 247, 0.15);
+  --color-surface-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.05);
+
+  /* READ Mode Colors */
+  --color-paper: #E8E6E3;
+  --color-ink: #1A1A1A;
 
   --font-sans: Inter, sans-serif;
   --font-display: "Playfair Display", serif;

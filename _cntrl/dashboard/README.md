@@ -1,16 +1,42 @@
-# React + Vite
+# CNTRL Dashboard ("The Face")
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **CNTRL Dashboard** is the React-based frontend tailored for a focused, "Editorial Luxury" writing experience. It serves as the visual interface for the Storyteller Engine.
 
-Currently, two official plugins are available:
+## Architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   **Layout (`IdeLayout.jsx`)**: The core orchestrator. Manages the 3-pane state (Nav, Library, Content, Oracle) and handles routing based on `activeMode`.
+*   **Library (`Library.jsx`)**: A recursive file explorer that allows switching between "NOVELS", "ARTICLES", and "JOURNALS".
+*   **Editor (`Editor.jsx`)**: The primary writing surface.
+*   **Oracle (`Oracle.jsx`)**: The AI companion interface.
 
-## React Compiler
+## Dashboards
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The application features contextual dashboards based on the selected library category:
 
-## Expanding the ESLint configuration
+1.  **Home Feed**: A media-rich overview of all recent activity.
+2.  **Novel Dashboard**: A dedicated command center for long-form fiction (currently "Coming Soon").
+3.  **Articles Dashboard**: A Kanban-style masonry grid for managing short-form articles and essays.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Design System
+
+The project uses **Tailwind CSS** with a custom "Editorial" configuration:
+*   **Fonts**: `Playfair Display` (Headings), `Inter` (UI), `JetBrains Mono` (Code/Meta).
+*   **Theme**: "Soft Charcoal" (`#202023`) background with "Editorial Lavender" (`#BFA6F7`) accents.
+
+## Development
+
+Run locally via the root script or directly:
+
+```bash
+cd _cntrl/dashboard
+npm install
+npm run dev
+```
+
+## Production
+
+The backend serves the compiled `dist/` folder.
+
+```bash
+npm run build
+```

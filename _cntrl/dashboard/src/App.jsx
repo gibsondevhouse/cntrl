@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 import IdeLayout from './layouts/IdeLayout';
 
-// Connect to the Gibby Core backend
-const socket = io('http://localhost:3001');
+// Connect to the CNTRL Core backend
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const socket = io(API_URL);
 
 function App() {
   const [status, setStatus] = useState('OFFLINE');
@@ -20,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <IdeLayout>
+    <IdeLayout socket={socket} status={status}>
       {/* Content is currently handled within IdeLayout for the V1 Stub */}
     </IdeLayout>
   );
