@@ -13,6 +13,6 @@ To provide a distraction-free, intelligent, and immersive "Author's Workbench" t
 
 ## Directives
 
-1. **Immersion**: The interface must feel like an ancient tome or a high-end study, not a computer terminal.
+1. **Editorial Luxury**: The interface must evoke a "NYT Best Seller" aesthetic in dark mode with lavender accents, prioritizing typography and focus.
 2. **Lucidity**: AI interactions should be fluid, streaming, and context-aware ("Lucid" state).
 3.  **Portability**: The entire "Studio" lives on the drive, ready to plug-and-play anywhere.
