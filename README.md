@@ -1,4 +1,4 @@
-# DevMob Ecosystem: CNTRL
+# CNTRL: The Storyteller Engine
 
 > "The Storyteller Engine. Unfolding the threads of imagination."
 
